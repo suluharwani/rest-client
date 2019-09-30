@@ -29,7 +29,9 @@ class Welcome extends CI_Controller {
 			]
 		];
 	$data['get'] = $this->guzzle_get('http://localhost/rest/api/','item');
-	// $data['post'] = $this->guzzle_post('http://localhost/rest/api/item',$insert);
+
+		$data['post'] = $this->guzzle_post('http://localhost/rest/api/item',$insert);
+
 	// $data['delete'] = $this->guzzle_delete('http://localhost/rest/api/item',$delete);
 	// $data['put'] = $this->guzzle_put('http://localhost/rest/api/item',$put);
 	$this->load->view('welcome_message',$data);
